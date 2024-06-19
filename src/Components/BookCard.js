@@ -14,7 +14,9 @@ export default function BookCard({title, Author, onClick, image, prevlink}) {
                     {/* <del>
                         <p class="text-sm text-gray-600 cursor-auto ml-2">$199</p>
                     </del> */}
-                    <div class="ml-auto"></div>
+                    <div class="ml-auto">
+                        <button class="py-2.5 px-6 text-sm bg-indigo-500 text-white rounded-lg cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-700">Read</button>
+                    </div>
                 </div>
             </div>
         </a>

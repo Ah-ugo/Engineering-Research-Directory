@@ -19,7 +19,7 @@ function NavBarComp() {
               {/* <CodeIcon /> */}
               <img src={Logo}/>
             </span>
-            <span>Faculty Assets Library</span>
+            <span>FACULTY REPOSITORY</span>
           </a>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>

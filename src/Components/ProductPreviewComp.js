@@ -20,8 +20,11 @@ const encodedUrlLink = encodeURIComponent(JSON.stringify(urlLink1));
                 <div
                     class="data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-center max-lg:pb-10 xl:my-2 lg:my-5 my-0">
                     <div class="data w-full max-w-xl">
-                        {/* <p class="text-lg font-medium leading-8 text-indigo-600 mb-4">Clothing&nbsp; /&nbsp; Menswear
-                        </p> */}
+                        <p class="text-lg font-medium leading-8 text-indigo-600 mb-4">
+                            {/* Clothing&nbsp; /&nbsp; Menswear */}
+                            Ebook
+                        </p>
+                        <h6 class="font-manrope font-semibold text-2xl leading-9 text-gray-900 pr-5 sm:border-r border-gray-200 mr-5">{data?.author}</h6>
                         <h2 class="font-manrope font-bold text-3xl leading-10 text-gray-900 mb-2 capitalize">
                             {data? data?.title: "Yellow Tropical Printed Shirt"}</h2>
                         {/* <div class="flex flex-col sm:flex-row sm:items-center mb-6">
@@ -99,6 +102,9 @@ const encodedUrlLink = encodeURIComponent(JSON.stringify(urlLink1));
                                 </div>
                                 <span class="pl-2 font-normal leading-7 text-gray-500 text-sm ">1624 review</span>
                             </div> */}
+
+{/* <h6 class="font-manrope font-semibold text-2xl leading-9 text-gray-900 pr-5 sm:border-r border-gray-200 mr-5">{data?.author}</h6> */}
+
 
                         {/* </div> */}
                         <p class="text-gray-500 text-base font-normal mb-5">
@@ -208,7 +214,7 @@ const encodedUrlLink = encodeURIComponent(JSON.stringify(urlLink1));
                                 </svg>
                                 Add to cart</button> */}
                         {/* </div> */}
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }} class="flex justify-between gap-3">
+                        <div class="flex flex-col justify-center sm:flex-row sm:justify-between gap-3">
                             {/* <button
                                 class="group transition-all duration-500 p-4 rounded-full bg-indigo-50 hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
@@ -221,12 +227,12 @@ const encodedUrlLink = encodeURIComponent(JSON.stringify(urlLink1));
 
                             </button>  */}
                             <Link target='_blank' to={`/preview/${encodedUrlLink}`}
-                                class="text-center w-f px-6 py-4 rounded-[100px] bg-indigo-600 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">
+                                class="py-2.5 px-6 text-sm bg-indigo-500 text-white rounded-lg cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-700">
                                 Preview Book
                             </Link>
                             
                             <Link download={true} target='_blank' to={data?.pdfFile?.url}
-                                class="text-center w-f px-6 py-4 rounded-[100px] bg-indigo-600 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">
+                                class="py-2.5 px-6 text-sm bg-indigo-500 text-white rounded-lg cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 hover:bg-indigo-700">
                                 Download Book
                             </Link>
                         </div>
