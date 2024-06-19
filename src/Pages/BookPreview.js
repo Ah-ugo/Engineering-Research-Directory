@@ -4,6 +4,15 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import { useParams } from 'react-router-dom';
 
+
+// import pdfJS from 'pdfjs-dist/build/pdf.js';
+// import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.js';
+// var pdflib = require('pdfjs-dist/build/pdf.js');
+
+// pdflib.GlobalWorkerOptions.workerPort = new pdfjsWorker();
+
+// pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
+
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',
     import.meta.url,
@@ -34,30 +43,16 @@ export default function BookPreview() {
     //     console.log('Decoded URL:', decodedUrl);
     //   }, [encodedUrlLink]);
   return (
-    <div>
-        <Document className={"mx-10"} onLoadSuccess={onDocumentLoadSuccess} file={data&&data?.pdfFile}>
+    <div className='mx-2'>
+        <Document className={""} onLoadSuccess={onDocumentLoadSuccess} file={data?.pdfFile}>
             
         <Page pageNumber={pageNumber}/></Document>
-        {/* {data&&data?.pdfFile} */}
+        {/* {pdfjs.version} */}
         <p>
         Page {pageNumber} of {numPages}
       </p>
-      {/* <div className='flex justify-between fixed bottom-0 w-full bg-white'>
-      <button
-      className='bg-blue-400'
-          disabled={pageNumber <= 1}
-          onClick={() => setPageNumber(pageNumber - 1)}
-        >
-          Previous
-        </button>
-        <button
-        className='bg-blue-400'
-          disabled={pageNumber >= numPages}
-          onClick={() => setPageNumber(pageNumber + 1)}
-        >
-          Next
-        </button>
-      </div> */}
+      
+      
       
 {/* <div class="bg-gray-200 max-w-lg p-36 container flex justify-center mx-auto"> */}
   <div class="flex justify-between sticky bottom-0 w-full z-20 flex-row mx-auto">
